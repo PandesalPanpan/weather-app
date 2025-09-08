@@ -74,3 +74,27 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+/*
+  Colors
+*/
+
+
+.nunito-family {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+:root {
+  --primary-color: #E0E1DD;
+  --secondary-color: #ebece7;
+  --primary-bg-color: #0D1B2A;
+  --secondary-bg-color: #1B263B;
+}
+
+body {
+  font-family: "nunito", sans-serif;
+  color: var(--primary-bg-color);
+  background-color: var(--primary-bg-color);
+}
