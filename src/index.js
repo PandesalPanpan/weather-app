@@ -10,6 +10,13 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
     const formData = new FormData(form);
     const query = formData.get("search");
+
+    conditionDOM.textContent = '';
+    weatherGif.src = '';
+    const loader = document.createElement("div");
+    loader.classList.add('loader');
+    conditionDOM.append(loader);
+
     WeatherAPI.getWeather(query)
     .then(response => {
         return response.currentConditions.conditions;
@@ -17,6 +24,9 @@ form.addEventListener('submit', (event) => {
     .then(conditions => {
         conditionDOM.textContent = `${conditions}`;
         return GiphyAPI.getGIF(conditions);
+    })
+    .finally(() => {
+        loader.remove();
     })
     .then(src => {
         weatherGif.src = src;
