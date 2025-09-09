@@ -120,5 +120,10 @@ body {
 }
 
 #weather-gif {
-  margin: 50px auto;
+  margin: 10px auto 10px auto;
+}
+
+#weather-condition {
+  text-align: center;
+  color: var(--primary-color);
 }
