@@ -118,3 +118,8 @@ body {
   display: flex;
   justify-content: center;
 }
+
+#weather-gif {
+  border: 15px solid var(--secondary-bg-color);
+  margin: 50px auto;
+}
